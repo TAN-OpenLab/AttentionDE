@@ -1,0 +1,7 @@
+
+# @package dset
+train: egs/Libri2Mix/tr
+valid: egs/Libri2Mix/va
+test: egs/Libri2Mix/te
+mix_json: egs/Libri2Mix/tr/mix.json
+mix_dir:

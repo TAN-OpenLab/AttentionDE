@@ -1,0 +1,58 @@
+sample_rate: 8000
+segment: 4
+stride: 1
+pad: true
+cv_maxlen: 8
+validfull: 1
+num_prints: 5
+device: cuda
+num_workers: 4
+verbose: 0
+show: 0
+checkpoint: true
+continue_from: ''
+continue_best: false
+restart: false
+checkpoint_file: checkpoint.th
+history_file: history.json
+samples_dir: samples
+seed: 2036
+dummy: null
+pesq: false
+eval_every: 1
+keep_last: 0
+optim: adam
+lr: 0.0005
+beta2: 0.999
+stft_loss: false
+stft_sc_factor: 0.5
+stft_mag_factor: 0.5
+epochs: 100
+batch_size: 1
+max_norm: 5
+lr_sched: step
+step:
+  step_size: 2
+  gamma: 0.98
+plateau:
+  factor: 0.5
+  patience: 5
+model: swave
+swave:
+  'N': 128
+  L: 8
+  H: 128
+  R: 6
+  C: 2
+  input_normalize: false
+ddp: false
+ddp_backend: nccl
+rendezvous_file: ./rendezvous
+rank: null
+world_size: null
+dset:
+  train: egs/wsj0/tr
+  valid: egs/wsj0/va
+  test: egs/wsj0/te
+  mix_json: egs/wsj0/tr/mix.json
+  mix_dir: null
